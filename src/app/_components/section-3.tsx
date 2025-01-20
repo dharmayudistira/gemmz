@@ -8,7 +8,7 @@ export const Section3 = () => {
         width={10000}
         height={10000}
         alt="asset6"
-        className="absolute left-[45%] top-[50%] h-[40vh] w-auto"
+        className="absolute left-[43%] top-[50%] h-auto w-[20vw]"
         priority
       />
 
@@ -17,7 +17,7 @@ export const Section3 = () => {
         width={10000}
         height={10000}
         alt="asset7"
-        className="absolute right-0 top-[50%] h-[65vh] w-auto"
+        className="absolute right-0 top-[50%] h-auto w-[40vw]"
         priority
       />
 
@@ -26,7 +26,7 @@ export const Section3 = () => {
         width={10000}
         height={10000}
         alt="asset7"
-        className="absolute left-0 top-[50%] h-[65vh] w-auto"
+        className="absolute left-0 top-[55%] h-auto w-[35vw]"
         priority
       />
     </div>

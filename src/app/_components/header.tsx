@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export const Header = () => {
   return (
-    <div className="absolute left-0 right-0 top-10 flex w-full justify-center">
+    <div className="absolute left-0 right-0 top-[2%] flex w-full justify-center">
       <div className="flex w-[80vw] items-center justify-between">
         <Image
           src={"/assets/asset-title.gif"}
           width={1000}
           height={1000}
           alt="Title"
-          className="h-[10vh] w-auto"
+          className="h-auto w-[35vw]"
           priority
         />
 
@@ -21,7 +21,7 @@ export const Header = () => {
               width={1000}
               height={1000}
               alt="DEX"
-              className="h-[8vh] w-auto hover:animate-shake"
+              className="h-auto w-[8vw] hover:animate-shake"
               priority
             />
           </Link>
@@ -32,7 +32,7 @@ export const Header = () => {
               width={1000}
               height={1000}
               alt="X"
-              className="h-[8vh] w-auto hover:animate-shake"
+              className="h-auto w-[8vw] hover:animate-shake"
               priority
             />
           </Link>
@@ -43,7 +43,7 @@ export const Header = () => {
               width={1000}
               height={1000}
               alt="Telegram"
-              className="h-[8vh] w-auto hover:animate-shake"
+              className="h-auto w-[8vw] hover:animate-shake"
               priority
             />
           </Link>
