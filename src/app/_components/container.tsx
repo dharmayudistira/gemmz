@@ -1,11 +1,7 @@
 import Header from "@/app/_components/header";
 import { Section1 } from "@/app/_components/section-1";
-import { Section2 } from "@/app/_components/section-2";
-import { Section3 } from "@/app/_components/section-3";
-import { Section4 } from "@/app/_components/section-4";
-import Footer from "@/app/_components/footer";
-import RunningText from "@/app/_components/running-text";
 import Image from "next/image";
+import { Section2 } from "./section-2";
 
 interface ContainerProps {
   config: {
@@ -18,28 +14,30 @@ interface ContainerProps {
 
 export default function Container({ config }: ContainerProps) {
   return (
-    <main className="w-full h-full relative">
+    <main className="relative h-full w-full overflow-hidden">
+      <Image
+        src={"/assets/bg.png"}
+        width={10000}
+        height={10000}
+        alt="BG"
+        className="h-full w-full scale-125"
+        priority
+      />
+
+      <Image
+        src={"/assets/asset9.png"}
+        width={10000}
+        height={10000}
+        alt="footer"
+        className="absolute -bottom-[10%] left-0 right-0 h-auto w-full scale-150 object-cover"
+        priority
+      />
+
       <Header />
       <Section1 />
-      <RunningText
-        marqueProps={{ direction: "right" }}
-        image={
-          <Image
-            src={"https://picsum.photos/40"}
-            width={40}
-            height={40}
-            alt=""
-          />
-        }
-        coinName="$COIN"
-        count={100}
-      />
       <Section2 />
-      <RunningText coinName="$COIN" count={100} />
-      <Section3 />
-      <RunningText coinName="$COIN" count={100} />
-      <Section4 />
-      <Footer />
+
+      
     </main>
   );
 }

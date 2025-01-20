@@ -1,55 +1,55 @@
-import Image from 'next/image';
-import Link from 'next/link';
-
-interface NavigationItem {
-  title: string;
-  link: string;
-}
-
-const navigations: NavigationItem[] = [
-  {
-    title: 'Chatbot',
-    link: '/chatbot'
-  },
-  {
-    title: 'Activity Log',
-    link: '/activity-log'
-  },
-  {
-    title: 'Proof Of Concept',
-    link: '/poc'
-  }
-
-];
+import Image from "next/image";
+import Link from "next/link";
 
 export const Header = () => {
   return (
-    <header className='sticky top-0 backdrop-blur-sm z-50'>
-      <div className='p-4 border border-black'>
-        <div className='container border border-black px-4 py-2 flex justify-between items-center gap-4'>
-          <div className='flex gap-4 items-center'>
+    <div className="absolute left-0 right-0 top-10 flex w-full justify-center">
+      <div className="flex w-[80vw] items-center justify-between">
+        <Image
+          src={"/assets/asset-title.gif"}
+          width={1000}
+          height={1000}
+          alt="Title"
+          className="h-[10vh] w-auto"
+          priority
+        />
+
+        <div className="flex items-center gap-10">
+          <Link href={""}>
             <Image
-              src={'https://picsum.photos/40'}
-              width={40}
-              height={40}
-              alt='app logo'
+              src={"/assets/link-dex.png"}
+              width={1000}
+              height={1000}
+              alt="DEX"
+              className="h-[8vh] w-auto hover:animate-shake"
+              priority
             />
+          </Link>
 
-            <Link href={'/'} className='underline'>App Name</Link>
-          </div>
+          <Link href={""}>
+            <Image
+              src={"/assets/link-x.png"}
+              width={1000}
+              height={1000}
+              alt="X"
+              className="h-[8vh] w-auto hover:animate-shake"
+              priority
+            />
+          </Link>
 
-          <div className='flex gap-4'>
-            {navigations.map((navigation, index) => {
-              return (
-                <Link key={index} href={navigation.link} className='underline'>
-                  {navigation.title}
-                </Link>
-              );
-            })}
-          </div>
+          <Link href={""}>
+            <Image
+              src={"/assets/link-tg.png"}
+              width={1000}
+              height={1000}
+              alt="Telegram"
+              className="h-[8vh] w-auto hover:animate-shake"
+              priority
+            />
+          </Link>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 

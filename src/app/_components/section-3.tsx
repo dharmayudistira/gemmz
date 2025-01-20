@@ -1,8 +1,34 @@
+import Image from "next/image";
+
 export const Section3 = () => {
   return (
-    <section className='w-full text-center content-center h-screen bg-yellow-500'>
-      {/* Content */}
-      Section 3
-    </section>
+    <div>
+      <Image
+        src={"/assets/asset6.gif"}
+        width={10000}
+        height={10000}
+        alt="asset6"
+        className="absolute left-[45%] top-[50%] h-[40vh] w-auto"
+        priority
+      />
+
+      <Image
+        src={"/assets/asset7.gif"}
+        width={10000}
+        height={10000}
+        alt="asset7"
+        className="absolute right-0 top-[50%] h-[65vh] w-auto"
+        priority
+      />
+
+      <Image
+        src={"/assets/asset8.gif"}
+        width={10000}
+        height={10000}
+        alt="asset7"
+        className="absolute left-0 top-[50%] h-[65vh] w-auto"
+        priority
+      />
+    </div>
   );
 };

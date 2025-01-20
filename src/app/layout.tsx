@@ -40,7 +40,7 @@ export default async function RootLayout({
     <>
       <Aos />
       <html lang="en" className="relative">
-        <body className={twMerge(dmSans.variable, "font-dm antialiased")}>
+        <body className={twMerge(dmSans.variable, "font-dm antialiased bg-[#8C4125]")}>
           <Providers config={configs?.[0] || null}>{children}</Providers>
         </body>
       </html>
