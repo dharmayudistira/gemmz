@@ -2,6 +2,7 @@ import Header from "@/app/_components/header";
 import { Section1 } from "@/app/_components/section-1";
 import Image from "next/image";
 import { Section2 } from "./section-2";
+import { Section3 } from "./section-3";
 
 interface ContainerProps {
   config: {
@@ -36,8 +37,7 @@ export default function Container({ config }: ContainerProps) {
       <Header />
       <Section1 />
       <Section2 />
-
-      
+      <Section3 />
     </main>
   );
 }
